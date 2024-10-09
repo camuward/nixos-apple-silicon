@@ -8,7 +8,7 @@
 # don't bother to provide Darwin deps
 ((pkgs.callPackage ./vendor { OpenGL = null; Xplugin = null; }).override {
   galliumDrivers = [ "swrast" "asahi" ];
-  vulkanDrivers = [ "swrast" ];
+  vulkanDrivers = [ "swrast" "asahi" ];
   enableGalliumNine = false;
   # libclc and other OpenCL components are needed for geometry shader support on Apple Silicon
   enableOpenCL = true;
